@@ -28,7 +28,11 @@
     "partners": {
       "dexhunter": "",
       "minswap": "",
-      "muesliswap": ""
+      "muesliswap": "",
+      "steelswap": "yoroi"
+    },
+    "steelswap": {
+      "authToken": "yoroi-xEwoVRkAcYSn4fgxsx5kS2ZJRBxPzAe15GyyG8FZVJEgn7e9UHfVZ07FwUBUAbmM"
     }
   },
   "banners": []

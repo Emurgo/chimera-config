@@ -25,7 +25,11 @@
     "partners": {
       "dexhunter": "dev-key",
       "minswap": "dev-key",
-      "muesliswap": "dev-key"
+      "muesliswap": "dev-key",
+      "steelswap": "dev"
+    },
+    "steelswap": {
+      "authToken": "yoroi-xEwoVRkAcYSn4fgxsx5kS2ZJRBxPzAe15GyyG8FZVJEgn7e9UHfVZ07FwUBUAbmM"
     }
   },
   "banners": []
