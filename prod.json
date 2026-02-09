@@ -1,0 +1,35 @@
+{
+  "features": {
+    "staking": true,
+    "swap": true,
+    "governance": true,
+    "nfts": true,
+    "defi": true,
+    "bridge": false,
+    "dappConnector": true,
+    "hardwareWallets": true,
+    "buyCrypto": true,
+    "portfolioPerformance": {
+      "enabled": true,
+      "rolloutPercentage": 25
+    },
+    "midnightAirdrop": true,
+    "advancedCoinSelection": false,
+    "multiWallet": true,
+    "addressBook": false,
+    "transactionFilters": false,
+    "exportHistory": false,
+    "biometricAuth": true,
+    "pushNotifications": false,
+    "priceAlerts": false,
+    "devTools": false
+  },
+  "swap": {
+    "partners": {
+      "dexhunter": "",
+      "minswap": "",
+      "muesliswap": ""
+    }
+  },
+  "banners": []
+}
