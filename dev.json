@@ -288,5 +288,11 @@
       "f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958"
     ]
   },
+  "secondfi": {
+    "smartAccount": {
+      "paymasterProvider": "wirex",
+      "usdcDepositRequired": true
+    }
+  },
   "banners": []
 }
