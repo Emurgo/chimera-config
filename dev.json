@@ -1,5 +1,5 @@
 {
-  "killSwitch": false,
+  "disableSigning": false,
   "enabledChains": [
     "bitcoin",
     "cardano",
