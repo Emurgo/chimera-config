@@ -1,25 +1,80 @@
 {
+  "killSwitch": false,
+  "enabledChains": [
+    "bitcoin",
+    "cardano",
+    "ethereum",
+    "base",
+    "avalanche",
+    "binance",
+    "tron",
+    "solana",
+    "ripple",
+    "midnight"
+  ],
+  "hardwareWallets": {
+    "ledger": {
+      "usb": {
+        "web": true,
+        "extension": true,
+        "android": true
+      },
+      "ble": {
+        "web": true,
+        "extension": true,
+        "android": true,
+        "ios": true
+      }
+    },
+    "trezor": {
+      "usb": {
+        "web": true,
+        "extension": true,
+        "android": true
+      },
+      "ble": {
+        "web": true,
+        "extension": true,
+        "android": true,
+        "ios": true
+      }
+    }
+  },
   "features": {
-    "staking": true,
+    "earn": true,
+    "card": true,
+    "portfolio": true,
+    "cardanoStaking": true,
+    "cardanoGovernance": true,
+    "send": true,
+    "receive": true,
+    "addWallet": true,
     "swap": true,
-    "governance": true,
+    "swapEnabledProviders": ["dexhunter", "minswap", "muesliswap", "steelswap"],
+    "buyCrypto": true,
+    "sellCrypto": true,
+    "rampEnabledProviders": ["moonpay", "banxa", "encryptus"],
+    "activity": true,
+    "createWallet": true,
+    "restoreWallet": true,
+    "socialLogin": true,
+    "connectHardwareWallet": true,
+    "bringCashback": true,
+    "withdraw": true,
+    "deposit": true,
+    "freeze": true,
+    "cardPayments": true,
     "nfts": true,
-    "defi": true,
     "bridge": true,
     "dappConnector": true,
-    "hardwareWallets": true,
-    "buyCrypto": true,
+    "discover": true,
     "portfolioPerformance": true,
     "midnightAirdrop": true,
-    "advancedCoinSelection": true,
     "multiWallet": true,
     "addressBook": true,
     "transactionFilters": true,
-    "exportHistory": true,
-    "biometricAuth": true,
-    "pushNotifications": true,
-    "priceAlerts": true,
-    "devTools": true
+    "biometrics": true,
+    "pushNotifications": true
   },
   "dapps": {
     "banned": [],

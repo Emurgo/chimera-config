@@ -1,28 +1,83 @@
 {
+  "killSwitch": false,
+  "enabledChains": [
+    "bitcoin",
+    "cardano",
+    "ethereum",
+    "base",
+    "avalanche",
+    "binance",
+    "tron",
+    "solana",
+    "ripple",
+    "midnight"
+  ],
+  "hardwareWallets": {
+    "ledger": {
+      "usb": {
+        "web": true,
+        "extension": true,
+        "android": true
+      },
+      "ble": {
+        "web": true,
+        "extension": true,
+        "android": true,
+        "ios": true
+      }
+    },
+    "trezor": {
+      "usb": {
+        "web": true,
+        "extension": true,
+        "android": true
+      },
+      "ble": {
+        "web": true,
+        "extension": true,
+        "android": true,
+        "ios": true
+      }
+    }
+  },
   "features": {
-    "staking": true,
+    "earn": true,
+    "card": true,
+    "portfolio": true,
+    "cardanoStaking": true,
+    "cardanoGovernance": true,
+    "send": true,
+    "receive": true,
+    "addWallet": true,
     "swap": true,
-    "governance": true,
+    "swapEnabledProviders": ["dexhunter", "minswap", "muesliswap", "steelswap"],
+    "buyCrypto": true,
+    "sellCrypto": true,
+    "rampEnabledProviders": ["moonpay", "banxa", "encryptus"],
+    "activity": true,
+    "createWallet": true,
+    "restoreWallet": true,
+    "socialLogin": true,
+    "connectHardwareWallet": true,
+    "bringCashback": true,
+    "withdraw": true,
+    "deposit": true,
+    "freeze": true,
+    "cardPayments": true,
     "nfts": true,
-    "defi": true,
     "bridge": false,
     "dappConnector": true,
-    "hardwareWallets": true,
-    "buyCrypto": true,
+    "discover": true,
     "portfolioPerformance": {
       "enabled": true,
       "rolloutPercentage": 25
     },
     "midnightAirdrop": true,
-    "advancedCoinSelection": false,
     "multiWallet": true,
     "addressBook": false,
     "transactionFilters": false,
-    "exportHistory": false,
-    "biometricAuth": true,
-    "pushNotifications": false,
-    "priceAlerts": false,
-    "devTools": false
+    "biometrics": true,
+    "pushNotifications": false
   },
   "dapps": {
     "banned": [],
