@@ -15,12 +15,10 @@
   "hardwareWallets": {
     "ledger": {
       "usb": {
-        "web": true,
         "extension": true,
         "android": true
       },
       "ble": {
-        "web": true,
         "extension": true,
         "android": true,
         "ios": true
@@ -28,12 +26,10 @@
     },
     "trezor": {
       "usb": {
-        "web": true,
         "extension": true,
         "android": true
       },
       "ble": {
-        "web": true,
         "extension": true,
         "android": true,
         "ios": true
