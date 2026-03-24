@@ -294,5 +294,8 @@
       "usdcDepositRequired": true
     }
   },
+  "allowedLinks": {
+    "cardano-card-io": "https://cardanocard.io"
+  },
   "banners": []
 }
