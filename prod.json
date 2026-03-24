@@ -42,6 +42,7 @@
     "portfolio": true,
     "cardanoStaking": true,
     "cardanoGovernance": true,
+    "earnDefi": true,
     "send": true,
     "receive": true,
     "addWallet": true,
