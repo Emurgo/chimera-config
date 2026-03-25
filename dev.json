@@ -348,5 +348,13 @@
   "allowedLinks": {
     "cardano-card-io": "https://cardanocard.io"
   },
-  "banners": []
+  "banners": [
+    {
+      "id": "dev-mode",
+      "type": "warning",
+      "title": "Development Mode",
+      "message": "You are running the dev configuration. This environment may be unstable.",
+      "dismissible": true
+    }
+  ]
 }
