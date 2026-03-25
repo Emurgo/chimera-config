@@ -45,9 +45,9 @@
     "activity": true,
     "discover": true,
     "midnightAirdrop": true,
-    "addressBook": false,
-    "transactionFilters": false,
-    "pushNotifications": false
+    "addressBook": true,
+    "transactionFilters": true,
+    "pushNotifications": true
   },
   "maintenance": {
     "send": false,
