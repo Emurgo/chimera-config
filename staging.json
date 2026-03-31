@@ -93,7 +93,7 @@
     ]
   },
   "ramp": {
-    "enabledProviders": ["moonpay", "banxa", "encryptus"]
+    "enabledProviders": ["banxa", "encryptus", "moonpay", "ramp_network", "revolut"]
   },
   "dapps": {
     "banned": [],
