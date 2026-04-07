@@ -40,7 +40,7 @@
     "restoreWallet": true,
     "socialLogin": true,
     "connectHardwareWallet": true,
-    "nfts": true,
+    "nfts": false,
     "dappConnector": true,
     "activity": true,
     "discover": true,
