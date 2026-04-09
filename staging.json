@@ -43,7 +43,7 @@
     "nfts": false,
     "dappConnector": true,
     "activity": true,
-    "discover": true,
+    "discover": false,
     "midnightAirdrop": true,
     "addressBook": true,
     "transactionFilters": true,
