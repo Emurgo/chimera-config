@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="76" viewBox="0 0 150 76" role="img" aria-label="Stacked banner illustration">
+  <rect x="72" y="26" width="50" height="30" rx="8" fill="#1D4ED8" opacity="0.35"/>
+  <rect x="66" y="20" width="50" height="30" rx="8" fill="#2563EB" opacity="0.65"/>
+  <rect x="60" y="14" width="50" height="30" rx="8" fill="#3B82F6"/>
+  <path d="M74 29h22" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="104" cy="29" r="4" fill="#FDE68A"/>
+</svg>
