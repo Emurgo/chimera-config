@@ -351,10 +351,20 @@
   "banners": [
     {
       "id": "dev-mode",
+      "contentId": "dev-mode",
       "type": "warning",
-      "title": "Development Mode",
-      "message": "You are running the dev configuration. This environment may be unstable.",
-      "dismissible": true
+      "imageUrl": "banners/images/dev-mode.svg",
+      "ctaLink": "https://emurgo.io",
+      "isDismissible": true,
+      "priorityWeight": 10,
+      "platformOverrides": {
+        "ios": {
+          "priorityWeight": 20
+        },
+        "android": {
+          "priorityWeight": 20
+        }
+      }
     }
   ]
 }

@@ -145,23 +145,46 @@ API keys for DEX aggregator partners:
 
 ## Banners
 
-Display in-app banners for announcements:
+Display in-app banners for announcements. The JSON manifest controls metadata, while translated copy lives in
+Markdown files under `banners/content`.
 
 ```json
 {
   "banners": [
     {
-      "id": "maintenance-2024-02",
+      "id": "dev-mode",
+      "contentId": "dev-mode",
       "type": "warning",
-      "title": "Scheduled Maintenance",
-      "message": "System maintenance on Feb 15, 10:00 AM UTC",
-      "startDate": "2024-02-10T00:00:00Z",
-      "endDate": "2024-02-16T00:00:00Z",
-      "dismissible": true
+      "imageUrl": "banners/images/dev-mode.svg",
+      "ctaLink": "https://emurgo.io",
+      "startDate": "2026-04-16T00:00:00Z",
+      "endDate": "2026-05-16T00:00:00Z",
+      "isDismissible": true,
+      "priorityWeight": 10,
+      "platformOverrides": {
+        "ios": {
+          "priorityWeight": 20
+        }
+      }
     }
   ]
 }
 ```
+
+Copy is fetched from `banners/content/{contentId}/{locale}.md`, falling back to
+`banners/content/{contentId}/en-US.md` when the selected locale is not available.
+
+Markdown files use this format:
+
+```md
+# Banner title
+
+Banner body text.
+
+[cta]: CTA label
+```
+
+Images should be stored under `banners/images/` and referenced by repository-relative path in `imageUrl`.
 
 ## Cache Behavior
 
