@@ -398,7 +398,7 @@
       "contentId": "dev-remote-stack",
       "type": "success",
       "imageUrl": "banners/images/dev-test/stack.svg",
-      "ctaLink": "/portfolio",
+      "ctaLink": "/(tabs)/portfolio",
       "isDismissible": true,
       "priorityWeight": 40
     },
