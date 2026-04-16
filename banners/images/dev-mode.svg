@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Development mode banner illustration">
-  <rect width="320" height="180" rx="24" fill="#14151A"/>
-  <rect x="36" y="36" width="248" height="108" rx="16" fill="#2A2D36"/>
-  <path d="M96 96l32-32 12 12-20 20 20 20-12 12-32-32z" fill="#F5C542"/>
-  <path d="M224 96l-32-32-12 12 20 20-20 20 12 12 32-32z" fill="#F5C542"/>
-  <path d="M151 132l24-84" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="76" viewBox="0 0 150 76" role="img" aria-label="Development mode banner illustration">
+  <rect x="72" y="16" width="56" height="44" rx="12" fill="#1F2937"/>
+  <rect x="82" y="26" width="36" height="24" rx="6" fill="#374151"/>
+  <path d="M92 38l8-8 4 4-4 4 4 4-4 4-8-8z" fill="#F59E0B"/>
+  <path d="M116 38l-8-8-4 4 4 4-4 4 4 4 8-8z" fill="#F59E0B"/>
+  <path d="M101 50l8-24" stroke="#F9FAFB" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="72" cy="58" r="6" fill="#22C55E"/>
+  <circle cx="128" cy="18" r="5" fill="#60A5FA"/>
 </svg>

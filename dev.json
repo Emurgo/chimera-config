@@ -365,6 +365,49 @@
           "priorityWeight": 20
         }
       }
+    },
+    {
+      "id": "dev-remote-target",
+      "contentId": "dev-remote-target-web",
+      "type": "info",
+      "imageUrl": "banners/images/dev-test/target-web.svg",
+      "ctaLink": "/ramp",
+      "isDismissible": true,
+      "priorityWeight": 50,
+      "platformOverrides": {
+        "extension": {
+          "contentId": "dev-remote-target-extension",
+          "imageUrl": "banners/images/dev-test/target-extension.svg"
+        },
+        "ios": {
+          "contentId": "dev-remote-target-ios",
+          "imageUrl": "banners/images/dev-test/target-ios.svg"
+        },
+        "android": {
+          "contentId": "dev-remote-target-android",
+          "imageUrl": "banners/images/dev-test/target-android.svg"
+        },
+        "web": {
+          "contentId": "dev-remote-target-web",
+          "imageUrl": "banners/images/dev-test/target-web.svg"
+        }
+      }
+    },
+    {
+      "id": "dev-remote-stack",
+      "contentId": "dev-remote-stack",
+      "type": "success",
+      "imageUrl": "banners/images/dev-test/stack.svg",
+      "ctaLink": "/(tabs)/portfolio",
+      "isDismissible": true,
+      "priorityWeight": 40
+    },
+    {
+      "id": "dev-remote-plain",
+      "contentId": "dev-remote-plain",
+      "type": "info",
+      "isDismissible": true,
+      "priorityWeight": 30
     }
   ]
 }

@@ -186,6 +186,10 @@ Banner body text.
 
 Images should be stored under `banners/images/` and referenced by repository-relative path in `imageUrl`.
 
+CTA links use a cross-platform convention:
+- App routes start with `/` and must match the Expo Router path used by the app, for example `/ramp` or `/(tabs)/portfolio`.
+- External links use a full URL such as `https://emurgo.io`.
+
 ## Cache Behavior
 
 - **Cache Duration:** 5 minutes

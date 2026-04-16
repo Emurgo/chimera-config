@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="76" viewBox="0 0 150 76" role="img" aria-label="Android target banner illustration">
+  <rect x="76" y="18" width="52" height="42" rx="12" fill="#16A34A"/>
+  <circle cx="92" cy="37" r="3" fill="#ECFDF5"/>
+  <circle cx="112" cy="37" r="3" fill="#ECFDF5"/>
+  <path d="M88 12l6 9M116 12l-6 9" stroke="#16A34A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M66 52h18M120 52h18" stroke="#22C55E" stroke-width="5" stroke-linecap="round"/>
+</svg>
