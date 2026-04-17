@@ -15,12 +15,13 @@
     "trezor": {
       "usb": {
         "extension": true,
-        "android": true
+        "android": true,
+        "ios": false
       },
       "ble": {
         "extension": true,
         "android": true,
-        "ios": true
+        "ios": false
       }
     }
   },
