@@ -19,8 +19,8 @@
         "ios": false
       },
       "ble": {
-        "extension": true,
-        "android": true,
+        "extension": false,
+        "android": false,
         "ios": false
       }
     }
