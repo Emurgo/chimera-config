@@ -7,7 +7,7 @@
         "android": true
       },
       "ble": {
-        "extension": true,
+        "extension": false,
         "android": true,
         "ios": true
       }
