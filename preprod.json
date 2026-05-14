@@ -334,7 +334,7 @@
   "secondfi": {
     "smartAccount": {
       "paymasterProvider": "wirex",
-      "usdcDepositRequired": true
+      "usdcDepositRequired": false
     }
   },
   "allowedLinks": {},
