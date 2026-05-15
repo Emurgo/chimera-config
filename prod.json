@@ -4,7 +4,8 @@
     "ledger": {
       "usb": {
         "extension": true,
-        "android": true
+        "android": true,
+        "ios": false
       },
       "ble": {
         "extension": false,
