@@ -156,8 +156,6 @@ available through routing on those chains.
   "cards": {
     "topUp": {
       "tokenIds": [
-        "CARDANO.25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935.55534443",
-        "CARDANO.25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935.55534454",
         "BASE.0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
         "BASE.0xfde4c96c8593536e31f229ea8f37b2ada2699bb2",
         "BASE.0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
