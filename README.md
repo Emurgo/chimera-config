@@ -143,6 +143,27 @@ API keys for DEX aggregator partners:
 - Rotated regularly
 - Not contain sensitive credentials
 
+## Card Top-Up Sources
+
+The card top-up asset picker reads `cards.topUp` from remote config.
+`tokenIds` contains exact routing token IDs. `chainIds` contains CAIP-2
+chain IDs and allows only the native token for each listed chain.
+
+```json
+{
+  "cards": {
+    "topUp": {
+      "tokenIds": [
+        "BASE.0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "BASE.0xfde4c96c8593536e31f229ea8f37b2ada2699bb2",
+        "BASE.0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42"
+      ],
+      "chainIds": ["cardano:mainnet"]
+    }
+  }
+}
+```
+
 ## Banners
 
 Display in-app banners for announcements. The JSON manifest controls metadata, while translated copy lives in
