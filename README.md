@@ -143,6 +143,52 @@ API keys for DEX aggregator partners:
 - Rotated regularly
 - Not contain sensitive credentials
 
+## Card Top-Up Sources
+
+The card top-up asset picker reads `cards.topUp` from remote config.
+`tokenIds` contains exact routing token IDs. `chainIds` contains CAIP-2
+chain IDs and allows only the native token for each listed chain. The current
+config allows native assets for the supported chains and the main stablecoins
+available through routing on those chains.
+
+```json
+{
+  "cards": {
+    "topUp": {
+      "tokenIds": [
+        "BASE.0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "BASE.0xfde4c96c8593536e31f229ea8f37b2ada2699bb2",
+        "BASE.0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
+        "ETH.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "ETH.0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "ETH.0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+        "AVAX.0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "AVAX.0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "AVAX.0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "AVAX.0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+        "BSC.0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "BSC.0x55d398326f99059ff775485246999027b3197955",
+        "SOL.EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "SOL.Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "SOL.HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+        "TRON.TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8",
+        "TRON.TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
+      ],
+      "chainIds": [
+        "cardano:mainnet",
+        "eip155:8453",
+        "bip122:000000000019d6689c085ae165831e93",
+        "eip155:1",
+        "eip155:43114",
+        "eip155:56",
+        "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+        "tron:mainnet"
+      ]
+    }
+  }
+}
+```
+
 ## Banners
 
 Display in-app banners for announcements. The JSON manifest controls metadata, while translated copy lives in
