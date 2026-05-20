@@ -371,5 +371,19 @@
     }
   },
   "allowedLinks": {},
-  "banners": []
+  "banners": [
+    {
+      "id": "coming-soon-earn",
+      "contentId": "coming-soon-earn",
+      "type": "info",
+      "ctaLink": "/(tabs)/earn",
+      "isDismissible": true,
+      "priorityWeight": 10,
+      "platformOverrides": {
+        "android": {
+          "priorityWeight": 10
+        }
+      }
+    }
+  ]
 }
