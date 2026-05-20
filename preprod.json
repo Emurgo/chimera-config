@@ -376,14 +376,10 @@
       "id": "coming-soon-earn",
       "contentId": "coming-soon-earn",
       "type": "info",
+      "imageUrl": "banners/images/coming-soon.svg",
       "ctaLink": "/(tabs)/earn",
       "isDismissible": true,
-      "priorityWeight": 10,
-      "platformOverrides": {
-        "android": {
-          "priorityWeight": 10
-        }
-      }
+      "priorityWeight": 10
     }
   ]
 }
