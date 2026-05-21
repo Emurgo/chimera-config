@@ -96,6 +96,11 @@
   "ramp": {
     "enabledProviders": ["banxa", "encryptus", "moonpay", "ramp_network", "revolut"]
   },
+  "earn": {
+    "gauntlet": {
+      "enable": false
+    }
+  },
   "dapps": {
     "banned": [],
     "recommended": [
