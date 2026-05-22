@@ -7,11 +7,11 @@ Public runtime configuration for the [Chimera wallet](https://github.com/Emurgo/
 | File | URL | Used by |
 |---|---|---|
 | `dev.json` | `…/refs/heads/main/dev.json` | Development builds and EAS internal dev variant |
-| `preprod.json` | `…/refs/heads/main/preprod.json` | Pre-production / QA builds |
+| `preview.json` | `…/refs/heads/main/preview.json` | Preview / QA builds (prod-shaped artifact, separate runtime env tag) |
 | `staging.json` | `…/refs/heads/main/staging.json` | Staging builds |
 | `prod.json` | `…/refs/heads/main/prod.json` | Released production builds |
 
-Each file shares the same schema. The wallet picks the URL based on the build variant (`--env=dev|preprod|staging|prod`).
+Each file shares the same schema. The wallet picks the URL based on the build env (`--env=dev|preview|staging|prod`).
 
 Banner copy lives under `banners/content/<contentId>/<locale>.md`. Banner images live under `banners/images/`.
 
