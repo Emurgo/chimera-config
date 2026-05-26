@@ -49,7 +49,8 @@
     "midnightAirdrop": true,
     "addressBook": true,
     "transactionFilters": true,
-    "pushNotifications": true
+    "pushNotifications": true,
+    "walletAddressRegistry": true
   },
   "maintenance": {
     "send": false,
