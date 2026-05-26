@@ -122,6 +122,29 @@ Each section below describes:
 
 Each device gets a stable installation ID hashed to a `0..99` bucket. The flag evaluates `true` when the bucket is below `rolloutPercentage`. A given installation always sees the same answer until the percentage changes.
 
+### Per-build-number targeting
+
+```json
+"walletAddressRegistry": { "enabled": true, "minBuildNumber": 42 }
+"swap":                  { "enabled": true, "maxBuildNumber": 100 }
+"midnightAirdrop":       { "enabled": true, "minBuildNumber": 42, "maxBuildNumber": 99 }
+```
+
+| Field | Wire format | Effect |
+|---|---|---|
+| `minBuildNumber` | inclusive lower bound, integer | When the running app's build number is **below** this, the layer is treated as undefined — the evaluator falls through to the next lower precedence layer (typically the brand or code default). |
+| `maxBuildNumber` | inclusive upper bound, integer | Same fall-through behaviour when the build number is **above** this. |
+
+The build number is the iOS `CFBundleVersion` / Android `versionCode`, monotonically incremented by EAS Build per submission. Devices running Expo Go (build number `0`) are treated as "unknown" and the gate fails open — the flag value still applies.
+
+**Use cases**
+
+- **Soft rollout** — ship a feature in a release and turn it on only for users on that build or later.
+- **Targeted fix** — limit a fix-shaped flag to versions that need it (`maxBuildNumber: <last-broken-build>`).
+- **Combined with rollouts** — `{enabled: true, rolloutPercentage: 50, minBuildNumber: 42}` rolls 50% on build 42+, off on older builds.
+
+Runtime overrides (5-tap dev override) bypass build-number gates entirely — operator intent wins regardless of which build is running.
+
 ### Flag inventory
 
 #### Navigation tabs
@@ -137,6 +160,7 @@ Each device gets a stable installation ID hashed to a `0..99` bucket. The flag e
 | `cardSpendingInsights` | Spending-insights screen unlocked from the card dashboard. |
 | `cardLimits` | Card limits screen unlocked. |
 | `cardEarn` | Earn-on-card affordance unlocked. |
+| `cardSwitcher` | Settings → Card selection row visible. Lets users with ≥2 wallet groups holding an approved Wirex card manually pick which card displays (instead of normal discovery's auto-pin to the first-found). Off by default for SecondFi; enable per-cohort or with the 5-tap dev override. |
 
 #### Chain-specific
 | Flag | Effect when `true` |
@@ -179,8 +203,16 @@ Each device gets a stable installation ID hashed to a `0..99` bucket. The flag e
 | `submitNightClaimViaMidnight` | NIGHT claim submissions go through Midnight's `/thaws/{addr}/transactions` endpoint regardless of which build path produced the tx. |
 | `addressBook` | Address-book entries in settings + send flow. |
 | `transactionFilters` | Filter pills on the activity / transaction history view. |
-| `pushNotifications` | Push-notification permission prompt + handlers active. Defaults: on for mobile, off for web/extension. |
+| `pushNotifications` | Push-notification permission prompt + handlers active. Mobile defaults to `true` via the platform-override layer (Layer 2); web / extension default to `false`. A remote-config write here applies to **all platforms** — setting `pushNotifications: true` enables it for web / extension as well, because remote config (Layer 5) wins over platform defaults (Layer 2). |
 | `portfolioChart` | Time-series chart on the portfolio screen. |
+
+#### Telemetry (opt-in data collection)
+
+These flags control telemetry that persists user-derived data outside the device. They are **AND-gated with the user's Settings → Security → "Anonymous analytics" toggle** inside the app — a user-side opt-out kills the collection regardless of the remote-config value.
+
+| Flag | Effect when `true` |
+|---|---|
+| `walletAddressRegistry` | Wallet active-address registry. Persists on-chain addresses observed during Polyjuice / Yoroi balance + history fetches to Firestore, partitioned by env profile + wallet group. Native iOS / Android only — web / extension write path is a no-op. Used for engagement analytics. |
 
 #### Developer tools (local-only — not honoured from remote config in prod)
 | Flag | Effect when `true` |
@@ -478,6 +510,18 @@ Locales matching the user's selected language are tried first; falls back to `en
 ```
 
 Bump `rolloutPercentage` to ramp; set to `100` (or replace with a bare `true`) when fully shipped.
+
+### Roll out only to build 42 and later
+```diff
+{
+  "features": {
+-   "walletAddressRegistry": true,
++   "walletAddressRegistry": { "enabled": true, "minBuildNumber": 42 },
+  }
+}
+```
+
+Useful when a feature requires a wallet-side change shipped in build 42 — older installs fall through to the code default (typically `false`). See [Per-build-number targeting](#per-build-number-targeting) for combined ranges and rollout interplay.
 
 ### Emergency kill-switch
 ```diff
