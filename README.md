@@ -365,7 +365,8 @@ Each device gets a stable installation ID hashed to a `0..99` bucket. The flag e
         "eip155:8453",
         "eip155:1",
         "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
-      ]
+      ],
+      "minAmount": 0
     }
   }
 }
@@ -375,8 +376,9 @@ Each device gets a stable installation ID hashed to a `0..99` bucket. The flag e
 |---|---|---|
 | `topUp.tokenIds` | `string[]` of routing token ids (`<CHAIN>.<address>`) | Exact tokens allowed as the source asset when topping up the card. The picker only shows tokens in this list. |
 | `topUp.chainIds` | `string[]` of CAIP-2 chain ids | Additionally allows the **native** asset on each listed chain (ETH on `eip155:1`, SOL on `solana:…`, etc.). Non-native ERC-20s on those chains must still be in `tokenIds` to surface. |
+| `topUp.minAmount` | `number` (USD) | Minimum top-up amount enforced on the amount-entry screen, source picker (sources below the floor are greyed out), and submit validation. **A positive number sets the floor**; `0`, a negative number, a non-finite value, or omitting the field disables the minimum entirely (the in-app fallback is `0`). |
 
-Both lists are read by the card top-up asset picker. Omitting the section disables the picker (no fundable assets).
+`tokenIds` / `chainIds` are read by the card top-up asset picker — omitting both disables the picker (no fundable assets). `minAmount` is read by the card top-up amount and source screens.
 
 ---
 
