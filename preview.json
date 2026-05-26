@@ -372,7 +372,8 @@
         "eip155:56",
         "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
         "tron:mainnet"
-      ]
+      ],
+      "minAmount": 0
     }
   },
   "allowedLinks": {},
