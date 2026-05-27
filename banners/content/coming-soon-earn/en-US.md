@@ -1,5 +1,5 @@
 # Coming soon
 
-Stablecoin yields & RWA access — tap to check Earn for more details
+Stablecoin yields & RWA access — explore upcoming Earn features
 
 [cta]: Explore Earn
