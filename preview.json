@@ -95,7 +95,7 @@
     ]
   },
   "ramp": {
-    "enabledProviders": ["banxa", "encryptus"]
+    "enabledProviders": ["banxa"]
   },
   "earn": {
     "gauntlet": {
