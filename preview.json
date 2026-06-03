@@ -388,5 +388,8 @@
       "isDismissible": true,
       "priorityWeight": 10
     }
-  ]
+  ],
+  "gql": {
+    "link": "https://gql-router.staging.xdefi.services/graphql"
+  }
 }
