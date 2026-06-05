@@ -377,7 +377,7 @@
       "minAmount": 0
     }
   },
-  "allowedLinks": {},
+  "allowedLinks": {"minswap": "https://minswap.org/"},
   "banners": [
     {
       "id": "coming-soon-earn",
