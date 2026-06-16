@@ -383,5 +383,8 @@
     }
   },
   "allowedLinks": {},
-  "banners": []
+  "banners": [],
+  "gql": {
+    "link": "https://gql-router.staging.xdefi.services/graphql"
+  }
 }
