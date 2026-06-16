@@ -276,6 +276,27 @@ Each device gets a stable installation ID hashed to a `0..99` bucket. The flag e
 
 ---
 
+## `transactions`
+
+```json
+{
+  "transactions": {
+    "review": {
+      "showMoreInfo": true
+    }
+  }
+}
+```
+
+| | |
+|---|---|
+| **Wire format** | `{ review?: { showMoreInfo?: boolean } }` |
+| **Read by** | `useTxReviewShowMoreInfo()` → `TxMoreInfoSection` on the transaction review screen |
+| **Effect when `true`** | The collapsible "More info" group renders on the review screen — copyable unsigned tx hash + raw payload. |
+| **Effect when `false` / omitted** | The group is hidden. Defaults to off when absent. |
+
+---
+
 ## `earn`
 
 ```json
