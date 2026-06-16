@@ -105,6 +105,11 @@
       "banxa"
     ]
   },
+  "transactions": {
+    "review": {
+      "showMoreInfo": false
+    }
+  },
   "earn": {
     "gauntlet": {
       "enable": false

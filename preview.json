@@ -97,6 +97,11 @@
   "ramp": {
     "enabledProviders": ["banxa"]
   },
+  "transactions": {
+    "review": {
+      "showMoreInfo": true
+    }
+  },
   "earn": {
     "gauntlet": {
       "enable": false
