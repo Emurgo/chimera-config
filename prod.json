@@ -37,6 +37,7 @@
     "buyCrypto": true,
     "sellCrypto": true,
     "cardanoStaking": true,
+    "cardanoUtxoConsolidation": false,
     "earnDefi": true,
     "createWallet": true,
     "restoreWallet": true,
