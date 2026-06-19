@@ -48,6 +48,7 @@
     "activity": true,
     "discover": false,
     "midnightAirdrop": true,
+    "escrowRedeemPrimary": true,
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,
