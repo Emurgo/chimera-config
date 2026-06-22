@@ -61,7 +61,7 @@
     "sellCrypto": false,
     "cardanoStaking": false,
     "earnDefi": false,
-    "cardano": false,
+    "cardano": true,
     "bitcoin": false,
     "ethereum": false,
     "base": false,
