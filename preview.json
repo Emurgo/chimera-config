@@ -54,7 +54,7 @@
     "walletAddressRegistry": true
   },
   "maintenance": {
-    "app": false,
+    "app": true,
     "send": false,
     "receive": false,
     "swap": false,
