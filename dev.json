@@ -4,10 +4,11 @@
     "ledger": {
       "usb": {
         "extension": true,
-        "android": true
+        "android": true,
+        "ios": false
       },
       "ble": {
-        "extension": true,
+        "extension": false,
         "android": true,
         "ios": true
       }
@@ -15,12 +16,13 @@
     "trezor": {
       "usb": {
         "extension": true,
-        "android": true
+        "android": true,
+        "ios": false
       },
       "ble": {
-        "extension": true,
-        "android": true,
-        "ios": true
+        "extension": false,
+        "android": false,
+        "ios": false
       }
     }
   },
@@ -44,14 +46,16 @@
     "nfts": false,
     "dappConnector": true,
     "activity": true,
-    "discover": true,
+    "discover": false,
     "midnightAirdrop": true,
+    "escrowRedeemPrimary": true,
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,
-    "walletAddressRegistry": true
+    "walletAddressRegistry": false
   },
   "maintenance": {
+    "app": true,
     "send": false,
     "receive": false,
     "swap": false,
@@ -71,12 +75,17 @@
     "midnight": false
   },
   "swap": {
-    "enabledProviders": ["dexhunter", "minswap", "muesliswap", "steelswap"],
+    "enabledProviders": [
+      "dexhunter",
+      "minswap",
+      "muesliswap",
+      "steelswap"
+    ],
     "partners": {
       "dexhunter": "yoroiwallet616464723171793935616335727a39613463393865643365397334357530613579336d717165653933386e78797939766b6b6c6e78643472746e336e666b3861336d707263396b3067636a6e6e35707873736b323435333477366137386d687a736d68346a3039da39a3ee5e6b4b0d3255bfef95601890afd80709",
       "muesliswap": "emurgo",
       "minswap": "yoroiwallet",
-      "steelswap": "yoroi-aggregator"
+      "steelswap": "yoroi-xEwoVRkAcYSn4fgxsx5kS2ZJRBxPzAe15GyyG8FZVJEgn7e9UHfVZ07FwUBUAbmM"
     },
     "initialPair": {
       "tokenIn": ".",
@@ -95,16 +104,18 @@
     ]
   },
   "ramp": {
-    "enabledProviders": ["banxa", "encryptus", "moonpay", "ramp_network", "revolut"]
+    "enabledProviders": [
+      "banxa"
+    ]
   },
   "transactions": {
     "review": {
-      "showMoreInfo": true
+      "showMoreInfo": false
     }
   },
   "earn": {
     "gauntlet": {
-      "enable": true
+      "enable": false
     }
   },
   "dapps": {
@@ -117,16 +128,9 @@
         "category": "News",
         "logo": "cardano-spot.png",
         "uri": "https://cardanospot.io/landing",
-        "origins": ["https://cardanospot.io"]
-      },
-      {
-        "id": "steelswap",
-        "name": "SteelSwap",
-        "description": "Refining swap outputs. Forging Cardano DeFi mastery.",
-        "category": "DEX",
-        "logo": "steelswap.png",
-        "uri": "https://steelswap.io/swap?input=&output=fe7c786ab321f41c654ef6c1af7b3250a613c24e4213e0425a7ae45655534441",
-        "origins": ["https://steelswap.io"]
+        "origins": [
+          "https://cardanospot.io"
+        ]
       },
       {
         "id": "minswap",
@@ -135,7 +139,10 @@
         "category": "DEX",
         "logo": "minswap.png",
         "uri": "https://app.minswap.org",
-        "origins": ["https://minswap.org", "https://app.minswap.org"]
+        "origins": [
+          "https://minswap.org",
+          "https://app.minswap.org"
+        ]
       },
       {
         "id": "sundaeswap",
@@ -144,7 +151,10 @@
         "category": "DEX",
         "logo": "sundaeswap.png",
         "uri": "https://app.sundae.fi",
-        "origins": ["https://sondae.fi", "https://app.sundae.fi"]
+        "origins": [
+          "https://sondae.fi",
+          "https://app.sundae.fi"
+        ]
       },
       {
         "id": "muesliswap",
@@ -153,7 +163,9 @@
         "category": "DEX",
         "logo": "muesliswap.png",
         "uri": "https://muesliswap.com/",
-        "origins": ["https://muesliswap.com"]
+        "origins": [
+          "https://muesliswap.com"
+        ]
       },
       {
         "id": "geniusyield",
@@ -162,7 +174,10 @@
         "category": "DEX",
         "logo": "genius-yield.png",
         "uri": "https://app.geniusyield.co",
-        "origins": ["https://www.geniusyield.co", "https://app.geniusyield.co"]
+        "origins": [
+          "https://www.geniusyield.co",
+          "https://app.geniusyield.co"
+        ]
       },
       {
         "id": "wingriders",
@@ -171,7 +186,10 @@
         "category": "DEX",
         "logo": "wingriders.png",
         "uri": "https://app.wingriders.com",
-        "origins": ["https://www.wingriders.com", "https://app.wingriders.com"]
+        "origins": [
+          "https://www.wingriders.com",
+          "https://app.wingriders.com"
+        ]
       },
       {
         "id": "dex_hunter",
@@ -180,7 +198,10 @@
         "category": "DEX",
         "logo": "dexhunter.png",
         "uri": "https://app.dexhunter.io",
-        "origins": ["https://www.dexhunter.io", "https://app.dexhunter.io"],
+        "origins": [
+          "https://www.dexhunter.io",
+          "https://app.dexhunter.io"
+        ],
         "isSingleAddress": true
       },
       {
@@ -190,7 +211,9 @@
         "category": "DEX",
         "logo": "fetch.png",
         "uri": "https://fetch.hosky.io",
-        "origins": ["https://fetch.hosky.io"],
+        "origins": [
+          "https://fetch.hosky.io"
+        ],
         "isSingleAddress": false
       },
       {
@@ -213,7 +236,10 @@
         "category": "Entertainment",
         "logo": "book.png",
         "uri": "https://app.book.io",
-        "origins": ["https://book.io", "https://app.book.io"]
+        "origins": [
+          "https://book.io",
+          "https://app.book.io"
+        ]
       },
       {
         "id": "nucast",
@@ -222,7 +248,10 @@
         "category": "Entertainment",
         "logo": "nucast.png",
         "uri": "https://app.nucast.io",
-        "origins": ["https://www.nucast.io", "https://app.nucast.io"]
+        "origins": [
+          "https://www.nucast.io",
+          "https://app.nucast.io"
+        ]
       },
       {
         "id": "taptools",
@@ -231,7 +260,9 @@
         "category": "Trading Tools",
         "logo": "taptools.png",
         "uri": "https://www.taptools.io/",
-        "origins": ["https://www.taptools.io"]
+        "origins": [
+          "https://www.taptools.io"
+        ]
       },
       {
         "id": "liqwid",
@@ -240,7 +271,10 @@
         "category": "DeFi",
         "logo": "liqwid.png",
         "uri": "https://v2.liqwid.finance",
-        "origins": ["https://liqwid.finance", "https://v2.liqwid.finance"]
+        "origins": [
+          "https://liqwid.finance",
+          "https://v2.liqwid.finance"
+        ]
       },
       {
         "id": "lenfi",
@@ -249,7 +283,10 @@
         "category": "DeFi",
         "logo": "lenfi.png",
         "uri": "https://app.lenfi.io",
-        "origins": ["https://lenfi.io", "https://app.lenfi.io"]
+        "origins": [
+          "https://lenfi.io",
+          "https://app.lenfi.io"
+        ]
       },
       {
         "id": "fluidtokens",
@@ -258,7 +295,10 @@
         "category": "DeFi",
         "logo": "fluidtokens.png",
         "uri": "https://app.fluidtokens.com",
-        "origins": ["https://fluidtokens.com", "https://app.fluidtokens.com"],
+        "origins": [
+          "https://fluidtokens.com",
+          "https://app.fluidtokens.com"
+        ],
         "isSingleAddress": true
       },
       {
@@ -268,7 +308,9 @@
         "category": "DeFi",
         "logo": "optionflow.png",
         "uri": "https://app.optionflow.finance/",
-        "origins": ["https://app.optionflow.finance"]
+        "origins": [
+          "https://app.optionflow.finance"
+        ]
       },
       {
         "id": "djed",
@@ -277,7 +319,9 @@
         "category": "Stablecoin",
         "logo": "djed.png",
         "uri": "https://djed.xyz/",
-        "origins": ["https://djed.xyz"],
+        "origins": [
+          "https://djed.xyz"
+        ],
         "isSingleAddress": true
       },
       {
@@ -287,7 +331,10 @@
         "category": "Decentralised Storage",
         "logo": "iagon.png",
         "uri": "https://app.iagon.com",
-        "origins": ["https://iagon.com", "https://app.iagon.com"]
+        "origins": [
+          "https://iagon.com",
+          "https://app.iagon.com"
+        ]
       },
       {
         "id": "govtools",
@@ -296,7 +343,9 @@
         "category": "Community",
         "logo": "govtools.jpeg",
         "uri": "https://gov.tools",
-        "origins": ["https://gov.tools"]
+        "origins": [
+          "https://gov.tools"
+        ]
       },
       {
         "id": "xerberus",
@@ -305,7 +354,9 @@
         "category": "Trading Tools",
         "logo": "xerberus.jpg",
         "uri": "https://app.xerberus.io",
-        "origins": ["https://app.xerberus.io"]
+        "origins": [
+          "https://app.xerberus.io"
+        ]
       },
       {
         "id": "summon",
@@ -314,7 +365,9 @@
         "category": "DAO",
         "logo": "summon.png",
         "uri": "https://app.summonplatform.io",
-        "origins": ["https://app.summonplatform.io"]
+        "origins": [
+          "https://app.summonplatform.io"
+        ]
       },
       {
         "id": "danogo",
@@ -323,7 +376,9 @@
         "category": "DEX",
         "logo": "danogo.png",
         "uri": "https://app.danogo.io",
-        "origins": ["https://app.danogo.io"]
+        "origins": [
+          "https://app.danogo.io"
+        ]
       },
       {
         "id": "clarity",
@@ -332,7 +387,9 @@
         "category": "DAO",
         "logo": "clarity.png",
         "uri": "https://www.clarity.vote",
-        "origins": ["https://www.clarity.vote"]
+        "origins": [
+          "https://www.clarity.vote"
+        ]
       },
       {
         "id": "saturnswap",
@@ -341,14 +398,30 @@
         "category": "DEX",
         "logo": "saturnswap.png",
         "uri": "https://saturnswap.io",
-        "origins": ["https://saturnswap.io"]
+        "origins": [
+          "https://saturnswap.io"
+        ]
       }
     ],
     "filters": {
-      "Media": ["News", "Entertainment"],
-      "Investment": ["DeFi", "DEX", "Stablecoin"],
-      "Trading": ["DEX", "Trading Tools", "Stablecoin"],
-      "Community": ["DAO", "Decentralised Storage"]
+      "Media": [
+        "News",
+        "Entertainment"
+      ],
+      "Investment": [
+        "DeFi",
+        "DEX",
+        "Stablecoin"
+      ],
+      "Trading": [
+        "DEX",
+        "Trading Tools",
+        "Stablecoin"
+      ],
+      "Community": [
+        "DAO",
+        "Decentralised Storage"
+      ]
     }
   },
   "secondfi": {
@@ -391,69 +464,16 @@
       "minAmount": 0
     }
   },
-  "allowedLinks": {
-    "cardano-card-io": "https://cardanocard.io"
-  },
+  "allowedLinks": {},
   "banners": [
     {
-      "id": "dev-mode",
-      "contentId": "dev-mode",
-      "type": "warning",
-      "imageUrl": "banners/images/dev-mode.svg",
-      "ctaLink": "https://emurgo.io",
-      "isDismissible": true,
-      "priorityWeight": 10,
-      "platformOverrides": {
-        "ios": {
-          "priorityWeight": 20
-        },
-        "android": {
-          "priorityWeight": 20
-        }
-      }
-    },
-    {
-      "id": "dev-remote-target",
-      "contentId": "dev-remote-target-web",
+      "id": "coming-soon-earn",
+      "contentId": "coming-soon-earn",
       "type": "info",
-      "imageUrl": "banners/images/dev-test/target-web.svg",
-      "ctaLink": "/ramp",
+      "imageUrl": "banners/images/coming-soon.svg",
+      "ctaLink": "/(tabs)/earn",
       "isDismissible": true,
-      "priorityWeight": 50,
-      "platformOverrides": {
-        "extension": {
-          "contentId": "dev-remote-target-extension",
-          "imageUrl": "banners/images/dev-test/target-extension.svg"
-        },
-        "ios": {
-          "contentId": "dev-remote-target-ios",
-          "imageUrl": "banners/images/dev-test/target-ios.svg"
-        },
-        "android": {
-          "contentId": "dev-remote-target-android",
-          "imageUrl": "banners/images/dev-test/target-android.svg"
-        },
-        "web": {
-          "contentId": "dev-remote-target-web",
-          "imageUrl": "banners/images/dev-test/target-web.svg"
-        }
-      }
-    },
-    {
-      "id": "dev-remote-stack",
-      "contentId": "dev-remote-stack",
-      "type": "success",
-      "imageUrl": "banners/images/dev-test/stack.svg",
-      "ctaLink": "/(tabs)/portfolio",
-      "isDismissible": true,
-      "priorityWeight": 40
-    },
-    {
-      "id": "dev-remote-plain",
-      "contentId": "dev-remote-plain",
-      "type": "info",
-      "isDismissible": true,
-      "priorityWeight": 30
+      "priorityWeight": 10
     }
   ],
   "gql": {
