@@ -52,7 +52,9 @@
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,
-    "walletAddressRegistry": false
+    "walletAddressRegistry": false,
+    "incidentDiscovery": false,
+    "incidentRecovery": false
   },
   "maintenance": {
     "app": true,

@@ -51,10 +51,12 @@
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,
-    "walletAddressRegistry": true
+    "walletAddressRegistry": true,
+    "incidentDiscovery": true,
+    "incidentRecovery": true
   },
   "maintenance": {
-    "app": true,
+    "app": false,
     "send": false,
     "receive": false,
     "swap": false,

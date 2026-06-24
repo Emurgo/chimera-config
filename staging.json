@@ -50,7 +50,9 @@
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,
-    "walletAddressRegistry": true
+    "walletAddressRegistry": true,
+    "incidentDiscovery": true,
+    "incidentRecovery": false
   },
   "maintenance": {
     "send": false,
