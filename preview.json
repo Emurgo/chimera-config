@@ -53,10 +53,10 @@
     "pushNotifications": true,
     "walletAddressRegistry": true,
     "incidentDiscovery": true,
-    "incidentRecovery": false
+    "incidentRecovery": true
   },
   "maintenance": {
-    "app": true,
+    "app": false,
     "send": false,
     "receive": false,
     "swap": false,

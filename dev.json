@@ -54,7 +54,7 @@
     "pushNotifications": true,
     "walletAddressRegistry": false,
     "incidentDiscovery": true,
-    "incidentRecovery": false
+    "incidentRecovery": true
   },
   "maintenance": {
     "app": false,
