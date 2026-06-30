@@ -46,7 +46,7 @@
     "dappConnector": true,
     "activity": true,
     "discover": false,
-    "midnightAirdrop": true,
+    "midnightAirdrop": false,
     "addressBook": true,
     "transactionFilters": true,
     "pushNotifications": true,

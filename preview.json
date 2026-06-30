@@ -46,7 +46,7 @@
     "dappConnector": true,
     "activity": true,
     "discover": false,
-    "midnightAirdrop": true,
+    "midnightAirdrop": false,
     "escrowRedeemPrimary": true,
     "addressBook": true,
     "transactionFilters": true,
