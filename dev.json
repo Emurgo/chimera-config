@@ -1,5 +1,5 @@
 {
-  "disableSigning": false,
+  "disableSigning": true,
   "hardwareWallets": {
     "ledger": {
       "usb": {
@@ -27,15 +27,15 @@
     }
   },
   "features": {
-    "earn": true,
-    "card": true,
+    "earn": false,
+    "card": false,
     "portfolio": true,
-    "send": true,
-    "receive": true,
+    "send": false,
+    "receive": false,
     "addWallet": true,
-    "swap": true,
-    "buyCrypto": true,
-    "sellCrypto": true,
+    "swap": false,
+    "buyCrypto": false,
+    "sellCrypto": false,
     "cardanoStaking": true,
     "cardanoUtxoConsolidation": false,
     "earnDefi": true,
@@ -54,7 +54,10 @@
     "pushNotifications": true,
     "walletAddressRegistry": false,
     "incidentDiscovery": true,
-    "incidentRecovery": true
+    "incidentRecovery": false,
+    "incidentWalletDeletionGuard": true,
+    "incidentQuarantinePill": true,
+    "incidentReceiveHardening": true
   },
   "maintenance": {
     "app": false,
