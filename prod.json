@@ -32,7 +32,7 @@
     "portfolio": true,
     "send": false,
     "receive": false,
-    "addWallet": true,
+    "addWallet": false,
     "swap": false,
     "buyCrypto": false,
     "sellCrypto": false,
