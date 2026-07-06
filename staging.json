@@ -51,6 +51,7 @@
     "transactionFilters": true,
     "pushNotifications": true,
     "walletAddressRegistry": true,
+    "encryptedBackupExport": true,
     "incidentDiscovery": true,
     "incidentRecovery": false,
     "incidentWalletDeletionGuard": true,
