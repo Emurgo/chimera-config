@@ -68,7 +68,7 @@
     "sellCrypto": false,
     "cardanoStaking": false,
     "earnDefi": false,
-    "cardano:mainnet": true,
+    "cardano:mainnet": false,
     "bitcoin": false,
     "ethereum": false,
     "base": false,
@@ -393,13 +393,6 @@
   },
   "allowedLinks": {"minswap": "https://minswap.org/"},
   "banners": [
-    {
-      "id": "cardano-maintenance-2026-06",
-      "contentId": "cardano-maintenance",
-      "type": "warning",
-      "isDismissible": false,
-      "priorityWeight": 100
-    },
     {
       "id": "coming-soon-earn",
       "contentId": "coming-soon-earn",
