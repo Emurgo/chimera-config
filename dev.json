@@ -44,7 +44,7 @@
     "socialLogin": true,
     "connectHardwareWallet": true,
     "nfts": false,
-    "dappConnector": true,
+    "dappConnector": false,
     "activity": true,
     "discover": false,
     "midnightAirdrop": false,
