@@ -471,17 +471,7 @@
     }
   },
   "allowedLinks": {},
-  "banners": [
-    {
-      "id": "coming-soon-earn",
-      "contentId": "coming-soon-earn",
-      "type": "info",
-      "imageUrl": "banners/images/coming-soon.svg",
-      "ctaLink": "/(tabs)/earn",
-      "isDismissible": true,
-      "priorityWeight": 10
-    }
-  ],
+  "banners": [],
   "gql": {
     "link": "https://gql-router.staging.xdefi.services/graphql"
   }
