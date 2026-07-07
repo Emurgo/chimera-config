@@ -59,6 +59,7 @@
     "incidentReceiveHardening": true
   },
   "maintenance": {
+    "app": { "value": true, "maxBuildNumber": 10249 },
     "send": false,
     "receive": false,
     "swap": false,
