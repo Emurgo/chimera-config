@@ -61,7 +61,7 @@
     "incidentReceiveHardening": true
   },
   "maintenance": {
-    "app": false,
+    "app": true,
     "send": false,
     "receive": false,
     "swap": false,
@@ -80,6 +80,7 @@
     "ripple": false,
     "midnight": false
   },
+  "appMaintenanceLiftVersion": "10.0.8",
   "swap": {
     "enabledProviders": [
       "dexhunter",

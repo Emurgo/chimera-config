@@ -241,11 +241,41 @@ These flags control telemetry that persists user-derived data outside the device
 
 | | |
 |---|---|
-| **Wire format** | `Partial<Record<string, boolean>>` where keys are either feature names (`send`, `receive`, `swap`, `buyCrypto`, `sellCrypto`, `cardanoStaking`, `earnDefi`) or chain ids (`cardano`, `bitcoin`, `ethereum`, `base`, `avalanche`, `binance`, `tron`, `solana`, `ripple`, `midnight`). |
-| **Read by** | `useMaintenanceMode(key)` → `RemoteBanners`, `DashboardQuickActions`, `DashboardChainPage` |
-| **Effect when `true`** | The feature / chain is visible but disabled. A "we're working on it" banner renders inline on the dashboard chain page and the quick-action button for the feature is greyed out. |
-| **Effect when `false` / omitted** | Normal behaviour. |
+| **Wire format** | `Partial<Record<string, boolean \| { value: boolean, minBuildNumber?: number, maxBuildNumber?: number }>>` where keys are either feature names (`send`, `receive`, `swap`, `buyCrypto`, `sellCrypto`, `cardanoStaking`, `earnDefi`), chain ids (`cardano`, `bitcoin`, `ethereum`, `base`, `avalanche`, `binance`, `tron`, `solana`, `ripple`, `midnight`), or the special `app` key. |
+| **Read by** | `useMaintenanceMode(key)` → `RemoteBanners`, `DashboardQuickActions`, `DashboardChainPage`. The `app` key is read by `useAppMaintenance()` → `MaintenanceTakeover` (full-screen, blocks the whole app). |
+| **Effect when active** | Feature / chain: visible but disabled, with a "we're working on it" banner + greyed-out quick action. `app`: full-screen takeover blocking all activity. |
+| **Effect when `false` / omitted / out of build range** | Normal behaviour. |
 | **Difference vs. `features.<x>: false`** | A feature flag *hides* the surface. Maintenance *shows the surface with a warning*. Use maintenance when you want users to know the feature exists but is temporarily unavailable. |
+
+### Per-build-number targeting
+
+```json
+"app": { "value": true, "maxBuildNumber": 10249 }
+```
+
+The object form scopes a maintenance flag to a build-number range (iOS `CFBundleVersion` / Android `versionCode`, the same monotonic int used by feature-flag `min/maxBuildNumber`). The flag is active only when `value` is `true` **and** the running build sits inside `[minBuildNumber, maxBuildNumber]` (both inclusive, both optional). Outside the range the flag is treated as **not** in maintenance.
+
+`{ "value": true, "maxBuildNumber": 10249 }` therefore means "in maintenance for build 10249 and earlier, lifted for later builds" — used to keep pre-fix releases locked while a fixed build resumes service without another config change. An unknown build number (`0`, dev / Expo Go) fails open — the `value` applies.
+
+> **Note:** build numbers are a single shared counter across platforms and preview/prod profiles, so app versions interleave — there is no exact build-number cut between two app versions. Pick the threshold deliberately against `eas build:list`.
+
+### Version-based lift for the `app` takeover (`appMaintenanceLiftVersion`)
+
+```json
+"maintenance": { "app": true },
+"appMaintenanceLiftVersion": "10.0.8"
+```
+
+The **only** correct way to keep older builds in the app-wide maintenance takeover while letting a fixed release out — in **production**, and on the **extension**.
+
+Why not the per-build-number object form for `app` in prod:
+
+- **Old builds read `maintenance.app === true`.** Changing the value to an object (`{ value: true, … }`) makes those builds evaluate `object === true` → `false` → they **escape** the takeover. `appMaintenanceLiftVersion` keeps `maintenance.app` a plain `true`, so any build that predates the lift stays locked (fail-safe).
+- **The extension has no build number.** `nativeBuildVersion` is iOS/Android only; on the extension it is `0` and build-number gating fails open. `appMaintenanceLiftVersion` compares the **app version** (`Constants.expoConfig.version` = `package.json` version), which is identical across iOS, Android and the extension.
+
+Semantics: a build is lifted out of the `app` takeover when its version is **≥ `appMaintenanceLiftVersion`**. Missing field, or an unknown running version, → **not** lifted (stays in maintenance). `maintenance.app` must still be truthy for the takeover to apply at all — the lift only *removes* it for new-enough builds; it never turns maintenance on.
+
+So `"maintenance": { "app": true }` + `"appMaintenanceLiftVersion": "10.0.8"` means: everyone on 10.0.7 and earlier sees the maintenance screen; 10.0.8 and later get in.
 
 ---
 
