@@ -80,7 +80,7 @@
     "ripple": false,
     "midnight": false
   },
-  "appMaintenanceLiftVersion": "10.0.9",
+  "appMaintenanceLiftVersion": "10.0.8",
   "swap": {
     "enabledProviders": [
       "dexhunter",
