@@ -484,6 +484,6 @@
     }
   ],
   "gql": {
-    "link": "https://gql-router.staging.xdefi.services/graphql"
+    "link": "https://gql-router.xdefi.services/graphql"
   }
 }
