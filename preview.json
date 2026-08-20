@@ -38,6 +38,7 @@
     "cardanoStaking": true,
     "cardanoUtxoConsolidation": false,
     "cardanoSendAll": true,
+    "cardanoSendAll_NEW": true,
     "earnDefi": true,
     "createWallet": true,
     "restoreWallet": true,
