@@ -1,5 +1,6 @@
 {
   "disableSigning": false,
+  "disableSigning_NEW": false,
   "hardwareWallets": {
     "ledger": {
       "usb": {
