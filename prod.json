@@ -1,5 +1,5 @@
 {
-  "disableSigning": true,
+  "disableSigning": false,
   "hardwareWallets": {
     "ledger": {
       "usb": {
@@ -39,6 +39,7 @@
     "cardanoStaking": true,
     "cardanoUtxoConsolidation": false,
     "cardanoSendAll": false,
+    "cardanoSendAll_NEW": true,
     "earnDefi": true,
     "createWallet": true,
     "restoreWallet": true,
