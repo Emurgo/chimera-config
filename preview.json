@@ -40,6 +40,7 @@
     "cardanoUtxoConsolidation": false,
     "cardanoSendAll": true,
     "cardanoSendAll_NEW": true,
+    "cardanoSendAllSponsored": true,
     "earnDefi": true,
     "createWallet": true,
     "restoreWallet": true,
