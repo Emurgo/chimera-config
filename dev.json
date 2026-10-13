@@ -41,6 +41,7 @@
     "cardanoUtxoConsolidation": false,
     "cardanoSendAll": true,
     "cardanoSendAll_NEW": true,
+    "cardanoSendAllSponsored": false,
     "earnDefi": true,
     "createWallet": true,
     "restoreWallet": true,
@@ -57,11 +58,11 @@
     "pushNotifications": true,
     "walletAddressRegistry": false,
     "encryptedBackupExport": true,
-    "incidentDiscovery": true,
+    "incidentDiscovery": false,
     "incidentRecovery": false,
-    "incidentWalletDeletionGuard": true,
-    "incidentQuarantinePill": true,
-    "incidentReceiveHardening": true
+    "incidentWalletDeletionGuard": false,
+    "incidentQuarantinePill": false,
+    "incidentReceiveHardening": false
   },
   "maintenance": {
     "app": true,
