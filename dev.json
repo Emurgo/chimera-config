@@ -9,7 +9,7 @@
         "ios": false
       },
       "ble": {
-        "extension": false,
+        "extension": true,
         "android": true,
         "ios": true
       }
@@ -21,9 +21,9 @@
         "ios": false
       },
       "ble": {
-        "extension": false,
-        "android": false,
-        "ios": false
+        "extension": true,
+        "android": true,
+        "ios": true
       }
     }
   },
