@@ -465,6 +465,49 @@ So `"maintenance": { "app": true }` + `"appMaintenanceLiftVersion": "10.0.8"` me
 
 ---
 
+## `recoveryRoadmap`
+
+Release progress for the wind-down recovery tools, shown in the app's **Find your recovery path** sheet. Lets the roadmap be corrected without an app release.
+
+```json
+{
+  "recoveryRoadmap": {
+    "tools": [
+      {
+        "id": "walletTransfer",
+        "label": "Wallet transfer tool",
+        "activePhase": "qa",
+        "phases": [
+          {"id": "qa", "label": "QA and testing"},
+          {"id": "store", "label": "App Store / Chrome approval"},
+          {"id": "live", "label": "Available"}
+        ]
+      }
+    ]
+  }
+}
+```
+
+| Field | Wire format | Effect |
+|---|---|---|
+| `tools` | array of tool objects | One card per tool, rendered in array order. |
+| `tools[].id` | `string`, non-empty | Stable identifier. Used for test ids only — not shown to the user. |
+| `tools[].label` | `string`, non-empty | Card heading (e.g. `Wallet transfer tool`). |
+| `tools[].phases` | array, at least one entry | The release checklist, rendered numbered `1..n` in array order. |
+| `tools[].phases[].id` | `string`, non-empty | Stable identifier, matched against `activePhase`. |
+| `tools[].phases[].label` | `string`, non-empty | Phase text (e.g. `QA and testing`). |
+| `tools[].activePhase` | `string` | Id of the phase the tool is currently in — that phase renders highlighted. |
+
+**Copy is English-only.** These labels bypass Crowdin by design: the roadmap changes faster than a translation cycle, and a stale translated phase is worse than an untranslated accurate one.
+
+**Validation is strict — malformed entries are dropped, never patched up.** A tool missing `id`, `label`, or all its phases is skipped; a phase missing `id` or `label` is skipped; a tool left with no valid phases is skipped. If `activePhase` matches no phase id, every phase renders unhighlighted rather than defaulting to the first — a wrong highlight would misinform users about an incident recovery timeline.
+
+**Omitting the whole section hides the surface.** There is no separate feature flag: absence of `recoveryRoadmap` removes the "Find your recovery path" entry point from the migrate card. Removing the section is the kill-switch.
+
+Advancing a tool is a one-word edit — change `activePhase` to the next phase id. Adding or renaming a phase needs no app release either, since the app renders whatever the array contains.
+
+---
+
 ## `allowedLinks`
 
 ```json

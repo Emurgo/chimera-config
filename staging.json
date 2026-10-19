@@ -392,6 +392,56 @@
       "minAmount": 0
     }
   },
+  "recoveryRoadmap": {
+    "tools": [
+      {
+        "id": "walletTransfer",
+        "label": "Wallet transfer tool",
+        "activePhase": "qa",
+        "phases": [
+          {
+            "id": "qa",
+            "label": "QA and testing"
+          },
+          {
+            "id": "store",
+            "label": "App Store / Chrome approval"
+          },
+          {
+            "id": "live",
+            "label": "Available"
+          }
+        ]
+      },
+      {
+        "id": "assetRecovery",
+        "label": "Asset recovery tool",
+        "activePhase": "audit",
+        "phases": [
+          {
+            "id": "zkAudit",
+            "label": "ZK proof audit"
+          },
+          {
+            "id": "audit",
+            "label": "Smart contract audit"
+          },
+          {
+            "id": "qa",
+            "label": "QA and testing"
+          },
+          {
+            "id": "store",
+            "label": "App Store / Chrome approval"
+          },
+          {
+            "id": "live",
+            "label": "Available"
+          }
+        ]
+      }
+    ]
+  },
   "allowedLinks": {},
   "banners": [],
   "gql": {
